@@ -1,0 +1,126 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 13 Aug, 2016, 5:32:32 PM
+    Author     : Ravi
+*/
+.menu {
+  background: url("../img/menu.png") no-repeat center;
+  background-size: 80%;
+  width: 61px;
+  display: block;
+  height: 41px; }
+
+.mainNav {
+  margin-top: 10px;
+  /*    height:73px;
+      .nav-wrapper{
+          height:73px;
+      }*/ }
+  .mainNav ul a:hover {
+    background-color: transparent; }
+  .mainNav .edifise {
+    transform: rotateX(45deg) rotateZ(40deg) scale(0.4) translateX(50px) translateY(50px); }
+  .mainNav ul li a {
+    color: #6c6c6c;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 14px;
+    line-height: 50px; }
+  .mainNav ul li.current-menu-item > a {
+    color: #F62459; }
+  .mainNav ul li a:hover {
+    color: #F62459; }
+  .mainNav .marginLeft10 {
+    margin-left: 10px;
+    margin-top: 10px; }
+  .mainNav ul.initnav li ul {
+    padding: 20px;
+    display: none;
+    position: absolute;
+    left: 5%;
+    width: auto;
+    min-height: 150px;
+    -webkit-box-shadow: 0px 0px 3px 0px rgba(50, 50, 50, 0.2);
+    -moz-box-shadow: 0px 0px 3px 0px rgba(50, 50, 50, 0.2);
+    box-shadow: 0px 0px 3px 0px rgba(50, 50, 50, 0.2); }
+    .mainNav ul.initnav li ul li a {
+      position: relative; }
+      .mainNav ul.initnav li ul li a img {
+        margin-top: 55px;
+        max-width: 120px;
+        height: auto;
+        opacity: 0.8; }
+    .mainNav ul.initnav li ul li a span {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      display: block;
+      text-align: center;
+      width: 100%;
+      opacity: 0.8; }
+    .mainNav ul.initnav li ul li a:hover img, .mainNav ul.initnav li ul li a:hover span {
+      opacity: 1; }
+  .mainNav ul.initnav > li:hover {
+    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.17); }
+  .mainNav ul.initnav > li:hover > a {
+    position: relative; }
+  .mainNav ul.initnav > li.menu-item-has-children:hover > a::after {
+    content: '';
+    width: 100%;
+    margin-top: -10px;
+    height: 20px;
+    position: absolute;
+    box-shadow: none;
+    background: white;
+    display: block;
+    left: 0;
+    z-index: 1; }
+  .mainNav ul li:hover ul {
+    background: white;
+    display: block; }
+
+.edifiseImg {
+  background: url("../img/logo.png") no-repeat right center;
+  background-size: 70px 40px; }
+
+.brand {
+  padding-right: 70px !important; }
+  .brand div {
+    color: #6c6c6c;
+    font-weight: bolder;
+    font-size: 24px;
+    line-height: 22px;
+    padding-top: 10px; }
+  .brand span {
+    display: block;
+    font-size: 14px;
+    font-weight: 400; }
+
+#slide-out li {
+  clear: both; }
+  #slide-out li ul {
+    -webkit-box-shadow: inset 0px 4px 3px 0px rgba(0, 0, 0, 0.22);
+    -moz-box-shadow: inset 0px 4px 3px 0px rgba(0, 0, 0, 0.22);
+    box-shadow: inset 0px 4px 3px 0px rgba(0, 0, 0, 0.22); }
+#slide-out li ul li {
+  clear: both; }
+  #slide-out li ul li a {
+    clear: both;
+    padding: 10px; }
+  #slide-out li ul li img {
+    max-height: 50px;
+    float: left; }
+  #slide-out li ul li span {
+    display: inline-block;
+    margin-left: 10px; }
+#slide-out li.current-menu-item > a {
+  color: #F62459; }
+
+.iframe {
+  border: none; }
+
+/*# sourceMappingURL=site.css.map */

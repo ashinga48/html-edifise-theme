@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <style type="text/css">
+            .loadingtext{
+                position: fixed;
+                top: 0;
+                left:0;
+                background: black;
+                color:white;
+                font-size: 12px;
+                padding:1px 10px;
+                text-transform: uppercase;
+                z-index: 999;
+            }
+        </style>
+        <script src="js/head.min.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            var dir = "";
+            var files_list = [
+                {
+                    path : dir+"css/materialize.min.css",
+                    message : "Loaded main CSS"
+                },
+                {
+                    path : dir+"css/style.css",
+                    message : "Loaded small CSS 1"
+                },
+                {
+                    path : dir+"css/site.css",
+                    message : "Loaded small CSS 2"
+                },
+                {
+                    path : dir+"js/jquery-3.1.0.min.js",
+                    message : "Loaded JQuery"
+                },
+                {
+                    path : dir+"js/materialize.min.js",
+                    message : "Loaded Main JS"
+                },
+                {
+                    path : dir+"js/main.js",
+                    message : "Loaded    Site js"
+                }
+            ];
+            var file_count = files_list.length;
+            
+//            head.load(dir+"css/materialize.min.css",function(){
+//                document.getElementById("loadingtext").innerHTML = Math.round((100/load_filecount)*file_index)+"% "+"Loading small css";
+//                file_index++;
+//                head.load([dir+"css/style.css",dir+"css/site.css"],function(){
+//                    document.getElementById("loadingtext").innerHTML = Math.round((100/load_filecount)*file_index)+"% "+"Loading JS";
+//                });
+//            });
+            
+            function load_file(){
+                if(files_list.length > 0){
+                    var t = files_list.shift();
+                    load_using_head(t.path,0,t.message);
+                }else
+                {
+                    $("#loadingtext").hide();
+                }
+            }
+            
+            function load_using_head(path, pindex, message){
+                head.load(path,function(){
+                    document.getElementById("loadingtext").innerHTML = Math.round(((file_count - files_list.length)/file_count)*100)+" % "+message;
+                    load_file();
+                });
+            }
+
+            load_file();
+        </script>
+        
+        
+<!--        <script src="js/jquery-3.1.0.min.js" type="text/javascript"></script>
+        <script src="js/materialize.min.js" type="text/javascript"></script>
+        <script src="js/jquery.lazyload.min.js" type="text/javascript"></script>    
+        <script src="js/main.js" type="text/javascript"></script>-->
+
+<!--        <link href="css/materialize.min.css" rel="stylesheet" type="text/css"/>
+        <link href="css/style.css" rel="stylesheet" type="text/css"/>
+        <link href="css/site.css" rel="stylesheet" type="text/css"/>-->
+    </head>
+    <body>
+        <div id="loadingtext" class="loadingtext">loading main css...</div>
+        
+        <div class="overlay"></div>
+        
+        <div class="edifise_text">
+            <h5 class="lighten-3">EDIFISE</h5>
+            <h6>Envision. Enlighten.</h6>
+            
+            <div class="edifise_progress">
+            <div class="edifise_progress-container">
+                   <div class="progress">
+                       <div class="progress-bar">
+                               <div class="progress-shadow"></div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+
+        </div>
+        
+        
+        <div class="LogoHolder">
+            <div class="edifise">
+                <div class="a2 awhiteleft"></div>
+                <div class="a3 ablue"></div>
+                <div class="a5 topright1"></div>
+                <div class="a6 topright1"></div>
+                <div class="a7 topright1"></div>
+                <div class="a8 flatline1"></div>
+                <div class="a9 flatline2"></div>
+                <div class="a10 toprightedge1"></div>
+                <div class="a11 toprightedge2"></div>
+                <div class="a12"></div>
+                <div class="a13"></div>
+                <div class="a4 awhiteright"></div>
+                <div class="a1 ared"></div>
+            </div>
+        </div>
+        
+        <div class="content">
+            
+            <nav class="z-depth-0 white mainNav ">
+                <div class="nav-wrapper">
+                    
+                    <a href="#" class="brand-logo right edifiseImg brand">
+                        <div>EDIFISE<span>ENVISION. ENLIGHTEN.</span></div>
+                    </a>
+                    
+                    <!--mobile menu-->          
+                    <ul id="slide-out" class="side-nav">
+                      
+                      <li><a href="#">ABOUT</a></li>
+                      <li class=" menu-item-has-children">
+                          <a class="collapsible-header">PRODUCTS</a>
+                            
+                          <ul>
+                                <li><a href="#"><img src="img/prod1.jpg" /><span>FASHION MIRROR</span></a></li>
+                                <li><a href="#"><img src="img/prod2.jpg" /><span>VR HEADSETS</span></a></li>
+                                <li><a href="#"><img src="img/prod3.jpg" /><span>AUGMENTED</span></a></li>
+                                <li><a href="#"><img src="img/prod4.jpg" /><span>MOTION SENSORS</span></a></li>
+                                <li><a href="#"><img src="img/prod5.jpg" /><span>FACE TRACKING</span></a></li>
+                                <li><a href="#"><img src="img/prod6.jpg" /><span>VIRTUAL ROOMS</span></a></li>
+                              </ul>
+                        
+                      </li>
+                      <li class="menu-item-has-children">
+                            <a class="collapsible-header">SERVICES</a>
+                                <ul>
+                                    <li><a href="#"><img src="img/service1.jpg" /><span>REAL ESTATE</span></a></li>
+                                    <li><a href="#"><img src="img/service2.jpg" /><span>JEWELLERY</span></a></li>
+                                    <li><a href="#"><img src="img/service3.jpg" /><span>E-COMMERCE</span></a></li>
+                                    <li><a href="#"><img src="img/service4.jpg" /><span>ADS</span></a></li>
+                                    <li><a href="#"><img src="img/service5.jpg" /><span>LIFESTYLE</span></a></li>
+                                    <li><a href="#"><img src="img/service6.jpg" /><span>MORE...</span></a></li>
+                                </ul>
+                      </li>
+                        <li><a href="#">DEMOS</a></li>
+                        <li><a href="#">CLIENTS</a></li>
+                        <li><a href="#">TEAM</a></li>
+                        <li><a href="#">R &amp; D</a></li>
+                        <li><a href="#">CONTACT</a></li>
+                    </ul>
+                    
+                    
+                    <a href="#" data-activates="slide-out" class="button-collapse mainmenu"><span class="menu"></span></a>
+                    
+                    <!--website menu-->
+                    <ul id="nav-mobile" class="left hide-on-med-and-down initnav marginLeft10">
+                    
+                    <li><a href="#">ABOUT</a></li>
+                    <li class="menu-item-has-children"><a href="" >PRODUCTS</a>
+                        <ul>
+                            <li><a href="#"><img src="img/prod1.jpg" /><span>FASHION MIRROR</span></a></li>
+                            <li><a href="#"><img src="img/prod2.jpg" /><span>VR HEADSETS</span></a></li>
+                            <li><a href="#"><img src="img/prod3.jpg" /><span>AUGMENTED</span></a></li>
+                            <li><a href="#"><img src="img/prod4.jpg" /><span>MOTION SENSORS</span></a></li>
+                            <li><a href="#"><img src="img/prod5.jpg" /><span>FACE TRACKING</span></a></li>
+                            <li><a href="#"><img src="img/prod6.jpg" /><span>VIRTUAL ROOMS</span></a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item-has-children"><a href="#">SERVICES</a>
+                        <ul>
+                            <li><a href="#"><img src="img/service1.jpg" /><span>REAL ESTATE</span></a></li>
+                            <li><a href="#"><img src="img/service2.jpg" /><span>JEWELLERY</span></a></li>
+                            <li><a href="#"><img src="img/service3.jpg" /><span>E-COMMERCE</span></a></li>
+                            <li><a href="#"><img src="img/service4.jpg" /><span>ADS</span></a></li>
+                            <li><a href="#"><img src="img/service5.jpg" /><span>LIFESTYLE</span></a></li>
+                            <li><a href="#"><img src="img/service6.jpg" /><span>MORE...</span></a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">DEMOS</a></li>
+                    <li><a href="#">CLIENTS</a></li>
+                    <li><a href="#">TEAM</a></li>
+                    <li><a href="#">R &amp; D</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                  </ul>
+                </div>
+              </nav>
+            
+            <iframe class="iframe" style="float:left;" src="http://playcanv.as/p/7eJUCXwd/" width="48%" height="500px" ></iframe>
+            
+           <div class="sketchfab-embed-wrapper"><iframe width="640" height="480" src="https://sketchfab.com/models/b374a4d8e3f4416a8ea4bcbdef7baf7e/embed?autostart=1&autospin=0.5&controls=1&annotations_visible=0&ui_infos=0&ui_controls=0&ui_stop=0" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel=""></iframe></div>
+            
+            
+         </div>
+        
+    </body>
+</html>
